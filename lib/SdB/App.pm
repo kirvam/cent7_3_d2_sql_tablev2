@@ -841,7 +841,7 @@ print "\n\n";
 #print $fh "<html xmlns=\"http://www.w3.org/1999/xhtml\">\n";
 #print $fh "<head>\n";
 print $fh "<meta http-equiv=\"Content-type\" content=\"text/html; charset=<% settings.charset %>\" />\n";
-print $fh "<title>CS Project Dashboard</title>\n";
+print $fh "<title>RT Dashboard</title>\n";
 ### print $fh "<link rel=\"stylesheet\" href=\"http://10.80.8.12:443/css/style.css\" />\n";
 print $fh "<!-- Grab jQuery from a CDN, fall back to local if necessary -->\n";
 print $fh "<script src=\"//code.jquery.com/jquery-1.11.1.min.js\"></script>\n";
@@ -861,7 +861,7 @@ my $big_string = "
     <!--
     <div class=page>
     -->
-    <h1>CS Dashboard</h1>
+    <h1>RT Dashboard</h1>
        <div class=metanav>
     <!--
     </div>
