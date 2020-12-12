@@ -774,11 +774,11 @@ sub evaluateLine {
 print "SUB: evaluateLine\n";
 my ($line,$ii) = @_;
 
-my $actions = {
-               'none' => sub { my $key = "1"; $hash{ $array[2] }{$key} = [ @array ]; },
-               $hash{ $array[0] } => sub { $ii++; my $key = create_entry_time(); $key = $key + $ii; $hash{ $array[0] }{$key} = [ @array ]; },
-               '_DEFAULT_' => sub { die "Unrecognized token '$_[0]'; aborting\n" }
-};
+#my $actions = {
+#               'none' => sub { my $key = "1"; $hash{ $array[2] }{$key} = [ @array ]; },
+#               $hash{ $array[0] } => sub { $ii++; my $key = create_entry_time(); $key = $key + $ii; $hash{ $array[0] }{$key} = [ @array ]; },
+#               '_DEFAULT_' => sub { die "Unrecognized token '$_[0]'; aborting\n" }
+#};
 ###
   chomp($line);
  ### chomp($_[0]);
@@ -791,12 +791,16 @@ my $actions = {
        $type = $1;
        print "$ii: \$type: ^$type^ | \$_[0]: $_[0] | \$array[0]: $array[0]\n";
    } else {
-      print "$ii: \$type: not parent ^$type^ | \$_[0]: $_[0] | \$array[0]: $array[0]\n";
+      
+#      print "$ii: \$type: not parent ^$type^ | \$_[0]: $_[0] | \$array[0]: $array[0]\n";
+       $type=$array[0];
+       print "$ii: \$type: not parent ^$type^ | \$_[0]: $_[0] | \$array[0]: $array[0]\n";
+
   };
-       my $action = $actions->{$type}
-             || $actions ->{$hash{ $array[0] }}
-             || $actions ->{_DEFAULT_};
-        $action->($array[0], $type, $actions);
+#       my $action = $actions->{$type}
+#             || $actions ->{$hash{ $array[0] }}
+#             || $actions ->{_DEFAULT_};
+#        $action->($array[0], $type, $actions);
 print "SUB CL: evaluateLine\n";
 };
 

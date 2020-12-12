@@ -17,7 +17,7 @@ entry2:3		Thing1	BLANK	03-18-2020	Thing1	PMH	Working on this.
 -Run it:
  
     sudo /usr/local/bin/plackup bin/app.psgi --port 5005 --host 0.0.0.0
-
+         /usr/local/bin/plackup bin/app.psgi --port 5009 --host 0.0.0.0
 
 
 -Paul
